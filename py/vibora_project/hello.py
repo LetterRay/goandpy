@@ -4,7 +4,7 @@ app = Vibora()
 
 @app.route('/')
 async def home():
-    return Response({'hello': 'world'})
+    return Response(f'helloworld'.encode())
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=8000)
