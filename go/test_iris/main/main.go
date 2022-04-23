@@ -4,8 +4,8 @@ import (
 	"github.com/kataras/iris/v12"
 	"github.com/kataras/iris/v12/middleware/logger"
 	"github.com/kataras/iris/v12/middleware/recover"
+	"test_iris/main/test"
 )
-import "main/test"
 
 func main() {
 	app := iris.New()
@@ -13,7 +13,7 @@ func main() {
 	app.Use(recover.New())
 	app.Use(logger.New())
 	app.Get("/", func (ctx iris.Context){
-		ctx.HTML("Hello")
+		ctx.HTML("Hello aaaa")
 	})
 	test.Test()
 
